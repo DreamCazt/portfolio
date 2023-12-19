@@ -1,3 +1,4 @@
+// Hover animation for project link
 document.addEventListener('DOMContentLoaded', () => {
   const listItems = document.querySelectorAll('#itemList li');
   const hoverImage = document.getElementById('hoverImage');
@@ -18,10 +19,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     item.addEventListener('mouseout', () => {
-      // Fade out the image
-    
+      
       hoverImage.style.transform = 'scale(1)';
       
     });
   });
 });
+
+
+// Section for scrolling animation
+const observer = new IntersectionObserver((entries) =>{
+  entries.forEach((entry) => {
+      console.log('entry' . entry)
+      if (entry.isIntersecting){
+          entry.target.classList.add('show');
+      }
+  });
+})
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
