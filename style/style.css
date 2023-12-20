@@ -33,7 +33,10 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px
+    
 }
 a{
     text-decoration: none;
@@ -321,7 +324,7 @@ header{
 #project-list{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 50%;
 }
 #img-frame{
     display: block;
@@ -526,4 +529,61 @@ ol{
         width: 100%;
     }
 }
+/* For devices smaller than 660px */
+@media only screen and (max-width: 660px) {
+
+    body {
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    #container {
+        width: 100%; /* Use full width for smaller screens */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    #nav-link {
+        gap: 20px; /* Adjust gap between navigation links */
+    }
+
+    header {
+        flex-direction: column; /* Stack header items vertically */
+    }
+
+    #l-hero, #r-hero {
+        width: 100%; /* Adjust width of hero sections */
+    }
+
+    #programmeur-web, #f-name, #s-name {
+        font-size: 50px; /* Adjust font size for smaller screens */
+    }
+    #eye, #portrait1, #portrait2, #img-pc {
+        width: 100%; 
+    }
+
+    #propos-content, #skill-content, #project-content, #contact-content {
+        flex-direction: column; 
+    }
+
+    #skill-bars {
+        width: 90%; 
+    }
+    .skill-container{
+        width: 100%; 
+    }
+    .info, .projet-element, #txt-mail {
+        font-size: 16px; 
+    }
+
+    #email-left-content, #email-content {
+        width: 100%; 
+    }
+    #project-list{   
+        width: 90%;
+        justify-self: center;
+    }
+}
+
 
